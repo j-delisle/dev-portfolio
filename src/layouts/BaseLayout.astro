@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import SideBar from '../components/SideBar.astro';
+---
+
+<!doctype html>
+<html lang="en" class="bg-base text-prime-text">
+  <head>
+    <BaseHead title={'Jay Delisle Dev'} description={''} />
+  </head>
+  <body>
+    <div class="container mx-auto min-h-screen">
+      <div class="flex flex-row flex-wrap py-4">
+        <SideBar />
+        <main role="main" class="w-full sm:w-2/3 md:w-3/4 pt-1 px-2">
+          <slot />
+        </main>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>

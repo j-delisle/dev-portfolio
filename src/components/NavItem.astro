@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon';
+
+const { navName, to, icon } = Astro.props;
+---
+
+<li>
+  <a
+    href={to}
+    class="text-primary hover:text-prime hover:bg-base-accent group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+  >
+    <Icon
+      pack="heroicons-outline"
+      name={icon}
+      class="text-prime-text group-hover:text-prime h-6 w-6 shrink-0"
+    />
+    {navName}
+  </a>
+</li>
