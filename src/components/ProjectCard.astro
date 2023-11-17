@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon';
+const { github_url, live_url, desc, name, stack } = Astro.props;
+console.log('test console', stack);
+const x = ['python', 'react'];
+---
+
+<div
+  class="group relative flex flex-col items-start text-prime-text hover:bg-base-light p-4 rounded-lg">
+  <a href={live_url}>
+    <div>
+      <!-- {stack.map((items) => <Icon pack="logos" name={items} class="h-6 w-6" />)} -->
+    </div>
+
+    <!-- <Icon pack="logos" name="react" class="h-8 w-8" /> -->
+    <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+      <span class="relative z-10 text-prime-text">{name}</span>
+    </h2>
+    <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      {desc}
+    </p>
+    <a
+      href={github_url}
+      class="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+      <Icon pack="mdi" name="link-variant" class="text-prime-text h-4 w-4" />
+
+      <span class="ml-2">planetaria.tech</span>
+    </a>
+  </a>
+</div>

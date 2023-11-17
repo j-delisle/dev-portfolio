@@ -1,8 +1,20 @@
 ---
+import ProjectCard from '../components/ProjectCard.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from 'astro-icon';
 ---
 
 <BaseLayout>
   <h1>Test</h1>
+  <ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+    <ProjectCard />
+    <ProjectCard
+      name="Catan Leaderboard"
+      stack={'python'}
+      desc="An app to record and keep track of Settler's Catan games played and won with a leaderboard"
+      github_url="https://icones.js.org/collection/mdi?s=link"
+      live_url="https://fractdev.com"
+    />
+  </ul>
 </BaseLayout>
