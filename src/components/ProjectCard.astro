@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 const { github_url, live_url, desc, name, stack } = Astro.props;
-console.log('test console', stack);
+// console.log('test console', stack);
 const x = ['python', 'react'];
 ---
 
@@ -9,10 +9,10 @@ const x = ['python', 'react'];
   class="group relative flex flex-col items-start text-prime-text hover:bg-base-light p-4 rounded-lg">
   <a href={live_url}>
     <div>
+      <!-- will resume this when astro issue is fixed -->
       <!-- {stack.map((items) => <Icon pack="logos" name={items} class="h-6 w-6" />)} -->
     </div>
 
-    <!-- <Icon pack="logos" name="react" class="h-8 w-8" /> -->
     <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
       <span class="relative z-10 text-prime-text">{name}</span>
     </h2>
