@@ -5,19 +5,18 @@ type Props = Project;
 
 const { title, techs, link } = Astro.props;
 
-const formatTechs = (values: string[]) =>
-  values.toString().replaceAll(',', ' • ');
+// const formatTechs = (values: string[]) =>
+//   values.toString().replaceAll(',', ' • ');
 ---
 
 <a
   class="group flex w-full cursor-pointer flex-col justify-between gap-2 rounded-md border border-prime-text p-4 transition-all duration-300 hover:-translate-y-2 hover:border-prime md:flex-row md:items-center"
   href={link}
   target="_blank"
-  rel="noreferrer"
->
+  rel="noreferrer">
   <div class="flex flex-col gap-4 md:flex-row md:items-center">
     <p class="text-prime-text">{title}</p>
-    <p>{formatTechs(techs)}</p>
+    <!-- <p>{formatTechs(techs)}</p> -->
   </div>
 
   <svg
@@ -25,8 +24,7 @@ const formatTechs = (values: string[]) =>
     height="18"
     viewBox="0 0 18 18"
     fill="none"
-    class="transition-all duration-300 group-hover:translate-x-1 group-hover:text-prime"
-  >
+    class="transition-all duration-300 group-hover:translate-x-1 group-hover:text-prime">
     <path
       d="M5.25 12.75L12.75 5.25"
       stroke="#999999"

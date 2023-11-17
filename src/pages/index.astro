@@ -2,6 +2,7 @@
 import ProjectCard from '../components/ProjectCard.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
 import Icon from 'astro-icon';
 ---
 
@@ -17,4 +18,5 @@ import Icon from 'astro-icon';
       live_url="https://fractdev.com"
     />
   </ul>
+  <PostCard />
 </BaseLayout>
