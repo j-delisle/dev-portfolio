@@ -14,10 +14,18 @@ import SideBar from '../components/SideBar.astro';
       <div class="flex flex-row flex-wrap py-4">
         <SideBar />
         <main role="main" class="w-full sm:w-2/3 md:w-3/4 pt-1 px-2">
-          <slot />
+          <div class="sm:px-8 my-9">
+            <div class="mx-auto w-full max-w-7xl lg:px-8">
+              <div class="relative px-4 sm:px-8 lg:px-12">
+                <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                  <slot />
+                </div>
+              </div>
+            </div>
+            <Footer />
+          </div>
         </main>
       </div>
     </div>
-    <Footer />
   </body>
 </html>

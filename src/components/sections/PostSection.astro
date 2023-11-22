@@ -1,0 +1,21 @@
+---
+import PostCard from '../PostCard.astro';
+---
+
+<section class="my-10">
+  <div class="py-6">
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-prime-text text-3xl underline underline-offset-8">My Recent Posts</h2>
+      <a href="#" class="text-secondary-text hover:text-prime hover:underline hover:underline-offset-4">See All Posts</a>
+    </div>
+
+    <p class="text-secondary-text">
+      Check out my articles and posts on trending industry topics and my journey
+    </p>
+  </div>
+  <ul class="flex flex-col space-y-4">
+    <PostCard />
+    <PostCard />
+    <PostCard post_url="#" />
+  </ul>
+</section>
