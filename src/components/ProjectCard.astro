@@ -23,18 +23,18 @@ const { github_url, live_url, desc, name, stack } = Astro.props;
     <h2
       class="mt-2 pb-6 text-base font-semibold text-zinc-800 dark:text-zinc-100"
     >
-      <span class="relative z-10 text-prime-text group-hover:text-prime"
+      <span class="relative z-1 text-prime-text group-hover:text-prime"
         >{name}</span
       >
     </h2>
     <p
-      class="relative z-10 mt-2 text-sm text-secondary-text group-hover:text-prime-text"
+      class="relative z-1 mt-2 text-sm text-secondary-text group-hover:text-prime-text"
     >
       {desc}
     </p>
     <a
       href={github_url}
-      class="relative w-full z-10 mt-6 flex text-sm font-medium transition hover:underline hover:underline-offset-2 hover:text-prime"
+      class="relative w-full z-1 mt-6 flex text-sm font-medium transition hover:underline hover:underline-offset-2 hover:text-prime"
     >
       <Icon
         pack="mdi"

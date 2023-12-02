@@ -4,22 +4,32 @@ import SocialIcons from './SocialIcons.astro';
 ---
 
 <div
-  class="sticky top-0 bottom-0 lg:left-0 flex grow flex-col gap-y-5 overflow-y-auto bg-base-100 px-6 pb-2 w-[300px] max-w-sm border-r-2 border-base-light"
+  class="hidden md:flex sticky top-0 bottom-0 lg:left-0 grow flex-col gap-y-5 overflow-y-auto bg-base-100 px-6 pb-2 w-[300px] max-w-sm border-r-2 border-base-light"
 >
   <div class="fixed">
     <div
       class="flex p-6 shrink-0 items-center border-b-2 border-base-light pb-4"
     >
-      <img class="h-48 w-auto" src="/images/profile-p.png" alt="Your Company" />
+      <a href="/" class="">
+        <img
+          class="h-48 w-auto"
+          src="/images/profile-p.png"
+          alt="Your Company"
+        />
+      </a>
     </div>
     <nav class="flex flex-1 flex-col">
       <div role="list" class="flex flex-1 flex-col gap-y-7">
         <ul role="list" class="-mx-2 space-y-1">
-          <NavItem to="#" navName="Projects" icon="code" />
-          <NavItem to="#" navName="Posts" icon="document-text" />
+          <NavItem to="#projects" navName="Projects" icon="code" />
+          <NavItem to="#posts" navName="Posts" icon="document-text" />
           <NavItem to="#" navName="Work With Me" icon="user-group" />
           <NavItem to="#" navName="Resume" icon="cloud-download" />
-          <NavItem to="#" navName="Contact" icon="mail" />
+          <NavItem
+            to="mailto:jay@jaydelisle.dev"
+            navName="Contact"
+            icon="mail"
+          />
         </ul>
       </div>
     </nav>

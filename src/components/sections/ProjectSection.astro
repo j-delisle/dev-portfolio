@@ -1,10 +1,13 @@
 ---
 import ProjectCard from '../ProjectCard.astro';
 ---
-<section class="my-10">
+
+<section id="#projects" class="my-10">
   <div class="py-6">
-    <h2 class="text-prime-text text-3xl mb-3 underline underline-offset-8">Recent Projects</h2>
-    
+    <h2 class="text-prime-text text-3xl mb-3 underline underline-offset-8">
+      Recent Projects
+    </h2>
+
     <p class="text-secondary-text">
       Checkout some of my recent projcts, live or the code.
     </p>
@@ -12,11 +15,11 @@ import ProjectCard from '../ProjectCard.astro';
   <ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
     <ProjectCard />
     <ProjectCard
-    name="Catan Leaderboard"
-    stack={['react', 'python']}
-    desc="An app to record and keep track of Settler's Catan games played and won with a leaderboard"
-    github_url="https://icones.js.org/collection/mdi?s=link"
-    live_url="https://fractdev.com"
+      name="Catan Leaderboard"
+      stack={['react', 'python']}
+      desc="An app to record and keep track of Settler's Catan games played and won with a leaderboard"
+      github_url="https://icones.js.org/collection/mdi?s=link"
+      live_url="https://fractdev.com"
     />
     <ProjectCard />
   </ul>

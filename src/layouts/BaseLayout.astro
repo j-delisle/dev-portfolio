@@ -1,7 +1,9 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import MobileNav from '../components/MobileNav.astro';
 import SideBar from '../components/SideBar.astro';
+import SocialIcons from '../components/SocialIcons.astro';
 ---
 
 <!doctype html>
@@ -14,7 +16,8 @@ import SideBar from '../components/SideBar.astro';
       <div class="flex flex-row flex-wrap py-4">
         <SideBar />
         <main role="main" class="w-full sm:w-2/3 md:w-3/4 pt-1 px-2">
-          <div class="sm:px-8 my-9">
+          <MobileNav />
+          <div class="mt-24 md:mt-0 sm:px-8 my-9">
             <div class="mx-auto w-full max-w-7xl lg:px-8">
               <div class="relative px-4 sm:px-8 lg:px-12">
                 <div class="mx-auto max-w-2xl lg:max-w-5xl">
@@ -24,6 +27,11 @@ import SideBar from '../components/SideBar.astro';
             </div>
           </div>
           <Footer />
+          <div
+            class="fixed w-full bottom-0 bg-base md:hidden pt-4 flex justify-center z-10"
+          >
+            <SocialIcons />
+          </div>
         </main>
       </div>
     </div>
