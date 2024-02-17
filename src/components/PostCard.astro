@@ -1,19 +1,17 @@
 ---
-const { post_url } = Astro.props;
+const { post } = Astro.props;
 ---
 
 <a
   class="group w-full flex cursor-pointer flex-col gap-2 rounded-md border border-secondary-text p-4 transition-all duration-300 hover:-translate-y-2 hover:border-prime"
-  href="/posts/the-power-of-react-hooks"
+  href={`/blog/${post.slug}`}
 >
   <div
     class="flex w-full flex-col justify-between gap-2 md:flex-row md:items-center"
   >
-    <p class="group-hover:text-prime text-neutral-100">
-      The Power Of React Hooks
-    </p>
+    <p class="group-hover:text-prime text-neutral-100">{post.data.title}</p>
     <div class="flex flex-row items-center gap-4">
-      <p>24/05/2023</p>
+      <p>{post.data.pubDate}</p>
 
       <svg
         width="18"
@@ -36,7 +34,5 @@ const { post_url } = Astro.props;
     </div>
   </div>
 
-  <p class="truncate">
-    Lorem ipsum dolor sit amet consectetur et ultrices blandit neque ege
-  </p>
+  <p class="truncate">{post.data.description}</p>
 </a>
