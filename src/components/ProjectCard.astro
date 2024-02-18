@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
 const { github_url, live_url, desc, name, stack } = Astro.props;
-// console.log('test console', stack);
 ---
 
 <div
@@ -15,11 +14,6 @@ const { github_url, live_url, desc, name, stack } = Astro.props;
     />
   </div>
   <a href={live_url}>
-    <div>
-      <!-- will resume this when astro issue is fixed -->
-      <!-- {stack.map((items) => <Icon pack="logos" name={items} class="h-6 w-6" />)} -->
-    </div>
-
     <h2
       class="mt-2 pb-6 text-base font-semibold text-zinc-800 dark:text-zinc-100"
     >
@@ -32,6 +26,9 @@ const { github_url, live_url, desc, name, stack } = Astro.props;
     >
       {desc}
     </p>
+    <div class="flex p-2 space-x-6 mt-4">
+      {stack.map((items) => <Icon pack="logos" name={items} class="h-6 w-6" />)}
+    </div>
     <a
       href={github_url}
       class="relative w-full z-1 mt-6 flex text-sm font-medium transition hover:underline hover:underline-offset-2 hover:text-prime"

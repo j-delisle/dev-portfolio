@@ -1,0 +1,5 @@
+name: Project 3 Name
+description: project description goes here
+project_url: https://google.com
+github_url: https://github.com
+stack_logos: ['python', 'htmx', 'react']

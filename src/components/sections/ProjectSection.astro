@@ -1,5 +1,8 @@
 ---
+import {getCollection} from "astro:content"
 import ProjectCard from '../ProjectCard.astro';
+
+const projects = await getCollection("projects")
 ---
 
 <section id="#projects" class="my-10">
@@ -13,14 +16,13 @@ import ProjectCard from '../ProjectCard.astro';
     </p>
   </div>
   <ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-    <ProjectCard />
+    {projects.map((project) =>
     <ProjectCard
-      name="Catan Leaderboard"
+      name={project.data.name}
       stack={['react', 'python']}
-      desc="An app to record and keep track of Settler's Catan games played and won with a leaderboard"
-      github_url="https://icones.js.org/collection/mdi?s=link"
-      live_url="https://fractdev.com"
-    />
-    <ProjectCard />
+      desc={project.data.description}
+      github_url={project.data.github_url}
+      live_url={project.data.project_url}
+    />)}
   </ul>
 </section>
