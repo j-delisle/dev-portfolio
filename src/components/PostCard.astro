@@ -1,5 +1,14 @@
 ---
 const { post } = Astro.props;
+const formatDate = post.data.pubDate.toLocaleString('en-US', {
+    //weekday: 'narrow', // long, short, narrow
+    day: 'numeric', // numeric, 2-digit
+    year: 'numeric', // numeric, 2-digit
+    month: 'long', // numeric, 2-digit, long, short, narrow
+    //hour: 'numeric', // numeric, 2-digit
+    //minute: 'numeric', // numeric, 2-digit
+    //second: 'numeric', // numeric, 2-digit
+});
 ---
 
 <a
@@ -11,7 +20,7 @@ const { post } = Astro.props;
   >
     <p class="group-hover:text-prime text-neutral-100">{post.data.title}</p>
     <div class="flex flex-row items-center gap-4">
-      <p>{post.data.pubDate}</p>
+      <p>{formatDate}</p>
 
       <svg
         width="18"
