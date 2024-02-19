@@ -10,10 +10,22 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const formatDate = entry.data.pubDate.toLocaleString('en-US', {
+    day: 'numeric', // numeric, 2-digit
+    year: 'numeric', // numeric, 2-digit
+    month: 'long', // numeric, 2-digit, long, short, narrow
+});
 ---
 <BaseLayout>
-    <Content/>
-</BaseLayout>
+    <div class="mx-auto flex flex-col justify-center max-w-2xl">
+        <p class='text-secondary-text'>{formatDate}</p>
+        <h1 class='text-4xl py-4 my-2'>{entry.data.title}</h1>
+        <p>{entry.data.description}</p>
+        <img src={entry.data.heroImage} class='my-7'>
+        <Content/>
+    </div>
+   </BaseLayout>
 
 
 
