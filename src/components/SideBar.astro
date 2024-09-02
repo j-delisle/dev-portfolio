@@ -8,23 +8,23 @@ import SocialIcons from './SocialIcons.astro';
 >
   <div class="fixed">
     <div
-      class="flex p-6 shrink-0 items-center border-b-2 border-base-light pb-4"
+      class="flex items-center p-6 pb-4 border-b-2 shrink-0 border-base-light"
     >
       <a href="/" class="">
         <img
-          class="h-48 w-auto"
+          class="w-auto h-48 border rounded-full"
           src="/images/profile-p.png"
           alt="Your Company"
         />
       </a>
     </div>
-    <nav class="flex flex-1 flex-col">
-      <div role="list" class="flex flex-1 flex-col gap-y-7">
+    <nav class="flex flex-col flex-1">
+      <div role="list" class="flex flex-col flex-1 gap-y-7">
         <ul role="list" class="-mx-2 space-y-1">
           <NavItem to="#projects" navName="Projects" icon="code" />
-          <NavItem to="/blog" navName="Posts" icon="document-text" />
+          <!-- <NavItem to="/blog" navName="Posts" icon="document-text" /> -->
           <NavItem to="#" navName="Work With Me" icon="user-group" />
-          <NavItem to="#" navName="Resume" icon="cloud-download" />
+          <!-- <NavItem to="#" navName="Resume" icon="cloud-download" /> -->
           <NavItem
             to="mailto:jay@jaydelisle.dev"
             navName="Contact"
