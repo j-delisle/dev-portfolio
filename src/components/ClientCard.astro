@@ -13,7 +13,7 @@ const { showcase_url, showcase_text, live_url, client_desc, project_desc, name, 
       class="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-prime"
     />
   </div>
-  <a href={live_url} class="flex-grow">
+  <a href={live_url} class="flex-grow" target="_blank" rel="noopener noreferrer">
     <h2
       class="pb-6 mt-2 text-base font-semibold text-zinc-800 dark:text-zinc-100"
     >
@@ -35,6 +35,7 @@ const { showcase_url, showcase_text, live_url, client_desc, project_desc, name, 
     <a
       href={showcase_url}
       class="flex w-full mt-6 text-sm font-medium transition z-1 hover:underline hover:underline-offset-2 hover:text-prime"
+      target="_blank" rel="noopener noreferrer"
     >
       <Icon
         pack="mdi"
