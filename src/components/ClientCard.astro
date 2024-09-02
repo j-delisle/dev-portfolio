@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon';
+const { showcase_url, showcase_text, live_url, client_desc, project_desc, name, stack } = Astro.props;
+---
+
+<div
+  class="group relative flex flex-col items-start text-prime-text hover:bg-base-accent p-4 rounded-lg border-[1px]"
+>
+  <div class="absolute top-0 right-0 p-2">
+    <Icon
+      pack="mdi"
+      name="arrow-top-right-thick"
+      class="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-prime"
+    />
+  </div>
+  <a href={live_url} class="flex-grow">
+    <h2
+      class="pb-6 mt-2 text-base font-semibold text-zinc-800 dark:text-zinc-100"
+    >
+      <span class="relative z-1 text-prime-text group-hover:text-prime"
+        >{name}</span
+      >
+    </h2>
+    <p
+      class="relative mt-2 text-sm z-1 text-secondary-text group-hover:text-prime-text"
+    >
+      {client_desc}
+    </p>
+    <div class="flex p-2 mt-4 space-x-6">
+      {stack.map((items) => <Icon pack="logos" name={items} class="w-6 h-6" />)}
+    </div>
+    <div class="relative mt-2 text-sm z-1 text-secondary-text group-hover:text-prime-text">
+      {project_desc}
+    </div>
+    <a
+      href={showcase_url}
+      class="flex w-full mt-6 text-sm font-medium transition z-1 hover:underline hover:underline-offset-2 hover:text-prime"
+    >
+      <Icon
+        pack="mdi"
+        name="link-variant"
+        class="w-4 h-4 text-prime-text group-hover:text-prime"
+      />
+
+      <span class="ml-2 hover:text-prime">{showcase_text}</span>
+    </a>
+  </a>
+</div>
+
