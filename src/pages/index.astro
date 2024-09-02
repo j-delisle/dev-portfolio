@@ -6,10 +6,19 @@ import PostSection from '../components/sections/PostSection.astro';
 import Icon from 'astro-icon';
 import Hero from '../components/Hero.astro';
 import ClientCard from '../components/ClientCard.astro';
+import Review from '../components/Review.astro';
 ---
 
 <BaseLayout>
   <Hero />
+
+  <!-- Testimonial Section -->
+  <Review
+    review_text={`"Jay helped us achieve everything we wanted to do on Webflow. I'd recommend him without any hesitation."`}
+    name="Tom Jacquesson"
+    company="Co-Founder @ Tweet Hunter"
+    image_src="/images/tom_j_th.webp"
+  />
 
   <!-- Client Work Projects -->
   <section id="#projects" class="my-10">
@@ -43,6 +52,13 @@ import ClientCard from '../components/ClientCard.astro';
       />
     </ul>
   </section>
+
+  <Review
+    review_text={`""Communication with Jay was excellent. He took my feedback and replied with detailed Loom videos highlighting what he did""`}
+    name="Luke Netti"
+    company="Founder @ Luke Netti"
+    image_src="/images/luke_netti.jpeg"
+  />
 
   <!-- Personal Projects -->
   <section id="#projects" class="my-10">
