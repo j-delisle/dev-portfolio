@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-const { github_url, live_url, desc, name, stack } = Astro.props;
+const { github_url, live_url, desc, name, stack, skill_src } = Astro.props;
 ---
 
 <div
@@ -10,36 +10,36 @@ const { github_url, live_url, desc, name, stack } = Astro.props;
     <Icon
       pack="mdi"
       name="arrow-top-right-thick"
-      class="h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-prime"
+      class="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-prime"
     />
   </div>
   <a href={live_url}>
     <h2
-      class="mt-2 pb-6 text-base font-semibold text-zinc-800 dark:text-zinc-100"
+      class="pb-6 mt-2 text-base font-semibold text-zinc-800 dark:text-zinc-100"
     >
       <span class="relative z-1 text-prime-text group-hover:text-prime"
         >{name}</span
       >
     </h2>
     <p
-      class="relative z-1 mt-2 text-sm text-secondary-text group-hover:text-prime-text"
+      class="relative mt-2 text-sm z-1 text-secondary-text group-hover:text-prime-text"
     >
       {desc}
     </p>
-    <div class="flex p-2 space-x-6 mt-4">
-      {stack.map((items) => <Icon pack="logos" name={items} class="h-6 w-6" />)}
+    <div class="flex p-2 mt-4 space-x-6">
+      <img src={skill_src}/>
     </div>
-    <a
+    <!-- <a
       href={github_url}
-      class="relative w-full z-1 mt-6 flex text-sm font-medium transition hover:underline hover:underline-offset-2 hover:text-prime"
+      class="relative flex w-full mt-6 text-sm font-medium transition z-1 hover:underline hover:underline-offset-2 hover:text-prime"
     >
       <Icon
         pack="mdi"
         name="link-variant"
-        class="text-prime-text h-4 w-4 group-hover:text-prime"
+        class="w-4 h-4 text-prime-text group-hover:text-prime"
       />
 
       <span class="ml-2 group-hover:text-prime">GitHub Repo</span>
-    </a>
+    </a> -->
   </a>
 </div>

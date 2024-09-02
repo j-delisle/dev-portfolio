@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-const { showcase_url, showcase_text, live_url, client_desc, project_desc, name, stack } = Astro.props;
+const { showcase_url, showcase_text, live_url, client_desc, project_desc, name, stack_src } = Astro.props;
 ---
 
 <div
@@ -27,7 +27,7 @@ const { showcase_url, showcase_text, live_url, client_desc, project_desc, name, 
       {client_desc}
     </p>
     <div class="flex p-2 mt-4 space-x-6">
-      {stack.map((items) => <Icon pack="logos" name={items} class="w-6 h-6" />)}
+      <img src={stack_src} />
     </div>
     <div class="relative mt-2 text-sm z-1 text-secondary-text group-hover:text-prime-text">
       {project_desc}

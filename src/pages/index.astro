@@ -7,6 +7,7 @@ import Icon from 'astro-icon';
 import Hero from '../components/Hero.astro';
 import ClientCard from '../components/ClientCard.astro';
 import Review from '../components/Review.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <BaseLayout>
@@ -21,7 +22,7 @@ import Review from '../components/Review.astro';
   />
 
   <!-- Client Work Projects -->
-  <section id="#projects" class="my-10">
+  <section id="clients" class="my-10">
     <div class="py-6">
       <h2 class="mb-3 text-3xl underline text-prime-text underline-offset-8">
         Recent Client Work
@@ -39,7 +40,7 @@ import Review from '../components/Review.astro';
         name="UrbanDirect"
         client_desc="Fast growing NYC startup working to disrupt the overnight shipping industry"
         project_desc="After failing to hit deadlines, I came on to UrbanDirect to lead application developlment. I got a full React frontend application out the door and proudction ready in two weeks to get the startup back on track for their launch date and oversaw the backend developer"
-        stack={['react', 'aws']}
+        stack_src="https://skillicons.dev/icons?i=react,javascript,aws,webflow,vite,c#&perline=6"
       />
       <ClientCard
         showcase_url="https://www.loom.com/share/14829874020d4dd68b05f5dda4c20c01?sid=7204643c-878b-49da-b4f4-87c291ea4c37"
@@ -48,20 +49,20 @@ import Review from '../components/Review.astro';
         name="TweetHunter"
         client_desc="Fast growing Twitter/X content tool that has been sold for over 7 figures"
         project_desc="I was brought on to improve Tweet Hunter's leading page performance. Was able to increase LP performance by over 40%. In addition I built out their content system in Webflow for their SEO strategist."
-        stack={['webflow', 'javascript']}
+        stack_src="https://skillicons.dev/icons?i=javascript,webflow&perline=6"
       />
     </ul>
   </section>
 
   <Review
-    review_text={`""Communication with Jay was excellent. He took my feedback and replied with detailed Loom videos highlighting what he did""`}
+    review_text={`"Communication with Jay was excellent. He took my feedback and replied with detailed Loom videos highlighting what he did"`}
     name="Luke Netti"
     company="Founder @ Luke Netti"
     image_src="/images/luke_netti.jpeg"
   />
 
   <!-- Personal Projects -->
-  <section id="#projects" class="my-10">
+  <section id="projects" class="my-10">
     <div class="py-6">
       <h2 class="mb-3 text-3xl underline text-prime-text underline-offset-8">
         Personal Projects
@@ -71,47 +72,15 @@ import Review from '../components/Review.astro';
         Some of my current projects that I'm working on myself
       </p>
     </div>
-    <ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-      <div
-        class="group relative flex flex-col items-start text-prime-text hover:bg-base-accent p-4 rounded-lg border-[1px]"
-      >
-        <div class="absolute top-0 right-0 p-2">
-          <Icon
-            pack="mdi"
-            name="arrow-top-right-thick"
-            class="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-prime"
-          />
-        </div>
-        <a href='#'>
-          <h2
-            class="pb-6 mt-2 text-base font-semibold text-zinc-800 dark:text-zinc-100"
-          >
-            <span class="relative z-1 text-prime-text group-hover:text-prime"
-              >Project Title</span
-            >
-          </h2>
-          <p
-            class="relative mt-2 text-sm z-1 text-secondary-text group-hover:text-prime-text"
-          >
-            Project description
-          </p>
-          <div class="flex p-2 mt-4 space-x-6">
-            <Icon pack="logos" name='react' class="w-6 h-6" />
-          </div>
-          <a
-            href='#'
-            class="relative flex w-full mt-6 text-sm font-medium transition z-1 hover:underline hover:underline-offset-2 hover:text-prime"
-          >
-            <Icon
-              pack="mdi"
-              name="link-variant"
-              class="w-4 h-4 text-prime-text group-hover:text-prime"
-            />
-
-            <span class="ml-2 group-hover:text-prime">GitHub Repo</span>
-          </a>
-        </a>
-      </div>
+    <ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2">
+      <!-- icon docs
+      https://github.com/tandpfun/skill-icons -->
+      <ProjectCard
+        live_url="https://autoservicelogger.com/"
+        desc="Web application to keep track of all vehicle service records and documents"
+        name="Auto Service Logger"
+        skill_src="https://skillicons.dev/icons?i=laravel,tailwindcss,php,postgres,aws&perline=5"
+      />
     </ul>
   </section>
 
