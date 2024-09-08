@@ -32,6 +32,13 @@ const { showcase_url, showcase_text, live_url, client_desc, project_desc, projec
     <div class="relative mt-2 text-sm z-1 text-secondary-text group-hover:text-prime-text">
       {project_desc}
     </div>
+    <p
+      class="relative mt-4 text-xs text-prime z-1 group-hover:text-prime-text"
+    >
+      <span class="text-prime">"</span>
+        {project_review}
+      <span class="text-prime">"</span>
+    </p>
     <a
       href={showcase_url}
       class="flex w-full mt-6 text-sm font-medium transition z-1 hover:underline hover:underline-offset-2 hover:text-prime"
@@ -45,13 +52,6 @@ const { showcase_url, showcase_text, live_url, client_desc, project_desc, projec
 
       <span class="ml-2 hover:text-prime">{showcase_text}</span>
     </a>
-    <p
-      class="relative flex-grow mt-2 text-sm text-prime z-1 group-hover:text-prime-text"
-    >
-      <span class="text-prime">"</span>
-        {project_review}
-      <span class="text-prime">"</span>
-    </p>
   </a>
 </div>
 
