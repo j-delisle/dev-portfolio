@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-const { showcase_url, showcase_text, live_url, client_desc, project_desc, name, stack_src } = Astro.props;
+const { showcase_url, showcase_text, live_url, client_desc, project_desc, project_review, name, stack_src } = Astro.props;
 ---
 
 <div
@@ -45,6 +45,13 @@ const { showcase_url, showcase_text, live_url, client_desc, project_desc, name, 
 
       <span class="ml-2 hover:text-prime">{showcase_text}</span>
     </a>
+    <p
+      class="relative flex-grow mt-2 text-sm text-prime z-1 group-hover:text-prime-text"
+    >
+      <span class="text-prime">"</span>
+        {project_review}
+      <span class="text-prime">"</span>
+    </p>
   </a>
 </div>
 
