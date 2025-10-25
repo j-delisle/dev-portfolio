@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
-const { github_url, live_url, desc, name, stack, skill_src } = Astro.props;
+const { marketing_url, github_url, app_url, desc, name, stack, skill_src } =
+  Astro.props;
 ---
 
 <div
@@ -13,7 +14,7 @@ const { github_url, live_url, desc, name, stack, skill_src } = Astro.props;
       class="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-prime"
     />
   </div>
-  <a href={live_url} target="_blank" rel="noopener noreferrer">
+  <a href={app_url} target="_blank" rel="noopener noreferrer">
     <h2
       class="pb-6 mt-2 text-base font-semibold text-zinc-800 dark:text-zinc-100"
     >
@@ -27,19 +28,26 @@ const { github_url, live_url, desc, name, stack, skill_src } = Astro.props;
       {desc}
     </p>
     <div class="flex p-2 mt-4 space-x-6">
-      <img src={skill_src}/>
+      <img src={skill_src} />
     </div>
-    <!-- <a
-      href={github_url}
-      class="relative flex w-full mt-6 text-sm font-medium transition z-1 hover:underline hover:underline-offset-2 hover:text-prime"
-    >
-      <Icon
-        pack="mdi"
-        name="link-variant"
-        class="w-4 h-4 text-prime-text group-hover:text-prime"
-      />
-
-      <span class="ml-2 group-hover:text-prime">GitHub Repo</span>
-    </a> -->
   </a>
+  {
+    marketing_url && (
+      <a
+        href={marketing_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="relative flex w-full
+        mt-6 text-sm font-medium transition z-10 hover:underline
+        hover:underline-offset-2 hover:text-prime"
+      >
+        <Icon
+          pack="mdi"
+          name="link-variant"
+          class="w-4 h-4 text-prime-text group-hover:text-prime"
+        />
+        <span class="ml-2 group-hover:text-prime">About</span>
+      </a>
+    )
+  }
 </div>

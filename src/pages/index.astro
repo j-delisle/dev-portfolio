@@ -28,9 +28,7 @@ import ProjectCard from '../components/ProjectCard.astro';
         Recent Client Work
       </h2>
 
-      <p class="text-secondary-text">
-        Some of my client projects
-      </p>
+      <p class="text-secondary-text">Some of my client projects</p>
     </div>
     <ul class="flex flex-col gap-x-12 gap-y-16 md:grid md:grid-cols-2">
       <ClientCard
@@ -78,7 +76,21 @@ import ProjectCard from '../components/ProjectCard.astro';
       <!-- icon docs
       https://github.com/tandpfun/skill-icons -->
       <ProjectCard
-        live_url="https://autoservicelogger.com/"
+        app_url="https://app.lucidly.so/"
+        marketing_url="https://lucidly.so/"
+        desc="Website QA all in one platform for real-time collaboration and feedback management"
+        name="Lucidly"
+        skill_src="https://skillicons.dev/icons?i=typescript,react,laravel,tailwindcss,postgres&perline=5"
+      />
+      <ProjectCard
+        app_url="https://getgeoflow.com/"
+        desc="Low-code personalization tool for Webflow websites with over 30+ visitor data points"
+        name="Geoflow"
+        skill_src="https://skillicons.dev/icons?i=javascript,nodejs,laravel,tailwindcss,postgres,cloudflare&perline=5"
+      />
+      <ProjectCard
+        app_url="https://app.autoservicelogger.com/"
+        marketing_url="https://autoservicelogger.com/"
         desc="Web application to keep track of all vehicle service records and documents"
         name="Auto Service Logger"
         skill_src="https://skillicons.dev/icons?i=laravel,tailwindcss,php,postgres,aws&perline=5"
