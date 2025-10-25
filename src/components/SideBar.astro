@@ -12,8 +12,8 @@ import SocialIcons from './SocialIcons.astro';
     >
       <a href="/" class="">
         <img
-          class="w-auto h-48 border rounded-full"
-          src="/images/profile-p.png"
+          class="w-48 h-48 border rounded-full object-cover"
+          src="/images/profile-color.JPG"
           alt="Your Company"
         />
       </a>
@@ -22,7 +22,11 @@ import SocialIcons from './SocialIcons.astro';
       <div role="list" class="flex flex-col flex-1 gap-y-7">
         <ul role="list" class="-mx-2 space-y-1">
           <NavItem to="#clients" navName="Client Projects" icon="code" />
-          <NavItem to="#projects" navName="Personal Projects" icon="chart-bar" />
+          <NavItem
+            to="#projects"
+            navName="Personal Projects"
+            icon="chart-bar"
+          />
           <!-- <NavItem to="/blog" navName="Posts" icon="document-text" /> -->
           <!-- <NavItem to="#" navName="Work With Me" icon="user-group" /> -->
           <!-- <NavItem to="#" navName="Resume" icon="cloud-download" /> -->
